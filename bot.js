@@ -1,3 +1,10 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
+ const prefix = "+";
+client.on('ready', () => {
+    console.log('I am ready!');
+});
+
 client.on('message',message =>   {
 if(message.rebel.bot) return;
   if(message.channel.type == 'dm') return;
