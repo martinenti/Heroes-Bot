@@ -31,7 +31,7 @@ const serverStats = {
 client.on('guildMemberAdd', member => {
  
     if (member.guild.id !== serverStats.guildID) return;
-    client.channels.get(serverStats.totalUsersID).setName(`عدد الاعضاء والبوتات : ${member.guild.memberCount}`);
+    client.channels.get(serverStats.totalUsersID).setName(`عدد الاعضاء : ${member.guild.memberCount}`);
     
 });
 
