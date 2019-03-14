@@ -33,9 +33,9 @@ const serverStats = {
 client.on('guildMemberAdd', member => {
  
     if (member.guild.id !== serverStats.guildID) return;
-    client.channels.get(serverStats.totalUsersID).setName(`Total Users : ${member.guild.memberCount}`);
-    client.channels.get(serverStats.memberCountID).setName(`Member Count : ${member.guild.members.filter(m => !m.bot).size}`);  
-    client.channels.get(serverStats.botCountID).setName(`Bot Count : ${member.guild.members.filter(m => m.bot).size}`); 
+    client.channels.get(serverStats.totalUsersID).setName(`عدد الاعضاء والبوتات : ${member.guild.memberCount}`);
+    client.channels.get(serverStats.memberCountID).setName(`عدد الاعضاء : ${member.guild.members.filter(m => !m.bot).size}`);  
+    client.channels.get(serverStats.botCountID).setName(`عدد البوتات : ${member.guild.members.filter(m => m.bot).size}`); 
     
     
 });
