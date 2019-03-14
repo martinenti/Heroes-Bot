@@ -22,9 +22,7 @@ client.on("guildMemberAdd", member => {
 //first we need to create an object
 const serverStats = { 
     guildID: '538374660707057696',
-    totalUsersID: '555698190792523780',
-    memberCountID: '555698217363308544',
-    botCountID: '555698322359320587',    
+    totalUsersID: '555698190792523780',   
 }; //this is thefirst
 
 
@@ -34,9 +32,6 @@ client.on('guildMemberAdd', member => {
  
     if (member.guild.id !== serverStats.guildID) return;
     client.channels.get(serverStats.totalUsersID).setName(`عدد الاعضاء والبوتات : ${member.guild.memberCount}`);
-    client.channels.get(serverStats.memberCountID).setName(`عدد الاعضاء : ${member.guild.members.filter(m => !m.bot).size}`);  
-    client.channels.get(serverStats.botCountID).setName(`عدد البوتات : ${member.guild.members.filter(m => m.bot).size}`); 
-    
     
 });
 
