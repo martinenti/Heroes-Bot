@@ -22,7 +22,7 @@ client.on("guildMemberAdd", member => {
 //first we need to create an object
 const serverStats = { 
     guildID: '538374660707057696',
-    totalUsersIS: '555698190792523780',
+    totalUsersID: '555698190792523780',
     memberCountID: '555698217363308544',
     botCountID: '555698322359320587',    
 }; //this is thefirst
