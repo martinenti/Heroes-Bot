@@ -36,6 +36,13 @@ client.on('guildMemberAdd', member => {
 });
 
 
+client.on("guildMemberRemove", (member) => {
+   
+ if (member.guild.id !== serverStats.guildID) return;
+    client.channels.get(serverStats.totalUsersID).setName(`عدد الاعضاء : ${member.guild.memberCount}`);
+    
+});
+
 
 
 client.login(process.env.BOT_TOKEN);  //اياكككك تلعب هنا لا تحط توكنك هنا 
