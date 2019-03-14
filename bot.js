@@ -15,7 +15,7 @@ client.on('message', message => {
 
 
 client.on("guildMemberAdd", member => {
-  client.channels.find('id', 'أي دي الشات').send(`**welcome to Codes : [ ${member} ]**`)
+  client.channels.find('id', 'أي دي الشات').send(`**welcome to Test server : [ ${member} ]**`)
 });
 
 
