@@ -19,6 +19,26 @@ client.on("guildMemberAdd", member => {
 });
 
 
+//first we need to create an object
+const serverStats = { 
+    guildID: '538374660707057696',
+    totalUsersIS: '555698190792523780',
+    memberCountID: '555698217363308544',
+    botCountID: '555698322359320587',    
+}; //this is thefirst
+
+
+
+
+client.on('guildMemberAdd', member => {
+ 
+    if (member.guild.id !== serverStats.guildID) return;
+    client.channels.get(serverStats.totalUsersID).setName(`Total Users : ${member.guild.memberCount}`);
+    client.channels.get(serverStats.memberCountID).setName(`Member Count : ${member.guild.members.filter(m => !m.bot).size}`);  
+    client.channels.get(serverStats.botCountID).setName(`Bot Count : ${member.guild.members.filter(m => m.bot).size}`); 
+    
+    
+});
 
 
 
